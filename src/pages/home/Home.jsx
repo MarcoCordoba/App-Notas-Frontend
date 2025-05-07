@@ -1,10 +1,12 @@
 import React from "react";
-import "./home.css"
+import "./home.css";
 
 function Home() {
-    return (
-        <h2>hola mundo</h2>
-    );
+  return (
+    <div>
+      <h2>Hola! estas son tus notas</h2>
+    </div>
+  );
 }
 
 export default Home;

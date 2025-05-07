@@ -1,4 +1,7 @@
-/* Estilo del formulario dentro de la Card de Login */
+.card-login{
+    margin-top: 4rem;
+}
+
 .card-login form {
     display: flex;
     flex-direction: column;
@@ -6,7 +9,6 @@
     padding: 2rem;
 }
   
-
 .card-login input {
     padding: 0.75rem;
     background-color: #1a1a1a;
