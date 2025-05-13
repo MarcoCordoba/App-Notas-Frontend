@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Home from "./pages/home/Home";
+import Note from "./pages/note/Note";
 import "./App.css";
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/note" element={<Note />} />
+            <Route path="/note/:id" element={<Note />} />
+
           </Routes>
         </main>
         <Footer />

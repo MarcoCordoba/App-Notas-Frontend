@@ -1,12 +1,9 @@
 import React from "react";
 import "./home.css";
+import { ListCard } from "../../components/listCard/ListCard";
 
 function Home() {
-  return (
-    <div>
-      <h2>Hola! estas son tus notas</h2>
-    </div>
-  );
+  return <ListCard/>;
 }
 
 export default Home;

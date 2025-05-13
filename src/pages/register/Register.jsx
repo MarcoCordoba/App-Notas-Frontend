@@ -22,7 +22,7 @@ function Register() {
         <input type="text" placeholder="Apellido" name="apellido" required />
         <input type="email" placeholder="Correo" name="correo" required />
         <input type="password" placeholder="Contraseña" name="password" required />
-        <input type="password" placeholder="Repite la Contraseña" name="repeatPassword" required />
+        <input type="password" placeholder="Repita la Contraseña" name="repeatPassword" required />
 
         <div className="buttons-register">
           <button type="button" onClick={handleLoginRedirect}>Iniciar sesión</button>
