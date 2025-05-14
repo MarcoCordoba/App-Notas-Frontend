@@ -3,6 +3,9 @@ import "./Note.css";
 import {useForm} from 'react-hook-form'
 import {crearNota, eliminarNota, actualizarNota, obtenerNota} from '../../api/NotasApi'
 import { useNavigate, useParams } from "react-router-dom";
+import Card from '../../components/card/Card'
+import {Button} from '../../components/button/Button'
+
 
 function Note() {
 
@@ -32,35 +35,42 @@ function Note() {
     }, []);
 
     return(
-        <div>
-            <form onSubmit={onSubmit}>
-                <input type="text"
-                    placeholder="titulo"
-                   {...register("titulo", {required: true})}
-                />
+        <div >
+            <Button onClick={() => navigate('/home')}>
+                volver
+            </Button>
+            
+            <Card>
+                <form onSubmit={onSubmit} >
+                    <input type="text"
+                        placeholder="titulo"
+                        {...register("titulo", {required: true})}
+                        />
 
-                <textarea rows = "3" 
-                    placeholder="descripcion"
-                    {...register("descripcion", {required: true})}
-                ></textarea>
-                <button>guardar</button>
-            </form>
+                    <textarea rows = "3" 
+                        placeholder="descripcion"
+                        {...register("descripcion", {required: true})}
+                    ></textarea>
+                    <button>guardar</button>
+                </form>
 
-            {params.id && (
-                <button 
-                    onClick = {async() => {
-                        const accepted = window.confirm("¿Seguro que quieres eliminar la tarea?");
-                        if (accepted) {
-                            await eliminarNota(params.id);
-                            navigate('/home');
-                        }
-                    }}
-                >
-                    eliminar
-                </button>/*si params tiene id entonces me muestra el boton eliminar*/
-            )}
+                {params.id && (
+                    <button 
+                        onClick = {async() => {
+                            const accepted = window.confirm("¿Seguro que quieres eliminar la tarea?");
+                            if (accepted) {
+                                await eliminarNota(params.id);
+                                navigate('/home');
+                            }
+                        }}
+                    >
+                        eliminar
+                    </button>/*si params tiene id entonces me muestra el boton eliminar*/
+                )}
+            </Card>
+
+           
         </div>
-    
     );
 }
 
