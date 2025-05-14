@@ -1,0 +1,14 @@
+.titulo{
+    font-size: 3rem;
+    display: inline-block;
+    margin: 0;
+}
+
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px; 
+    margin-top: 20px;
+}

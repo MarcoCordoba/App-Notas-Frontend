@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
@@ -21,7 +20,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/note" element={<Note />} />
             <Route path="/note/:id" element={<Note />} />
-
+            <Route path="/note/nueva" element={<Note />} />
           </Routes>
         </main>
         <Footer />

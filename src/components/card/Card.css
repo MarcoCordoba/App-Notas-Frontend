@@ -1,6 +1,6 @@
 .card-container {
     background-color: #1e1e1e;
-    color: #f0f0f0;
+    color: #ffffff;
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
@@ -21,3 +21,7 @@
     gap: 1rem;
   }
   
+  .card-nota{
+    align-content: ;
+  }
+

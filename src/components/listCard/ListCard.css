@@ -1,0 +1,10 @@
+.list-card-container {
+  display: flex;
+  flex-direction: row-reverse; /* La nueva queda a la izquierda */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: nowrap; /* evita que bajen de línea */
+  padding: 20px;
+  overflow-x: auto; /* por si son muchas cards */
+}

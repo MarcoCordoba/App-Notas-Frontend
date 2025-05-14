@@ -7,8 +7,6 @@ import { useNavigate, useParams } from "react-router-dom";
 function Note() {
 
     const {register, handleSubmit, setValue} = useForm();
-    
-     
     const navigate = useNavigate(); 
     const params = useParams();
         
