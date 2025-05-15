@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getNotas } from "../../api/NotasApi";
 import { NotaCard } from "../notaCard/NotaCard";
-import "./ListCard.css"; // importá el CSS
+import "./ListCard.css";
 
 export function ListCard() {
   const [tareas, setTareas] = useState([]);

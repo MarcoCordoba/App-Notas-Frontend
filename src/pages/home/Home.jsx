@@ -10,7 +10,7 @@ function Home() {
   return (
     <div>
       <div className="home-header">
-         <h2 className="titulo">tus notas</h2>
+        <h2 className="titulo">Notas</h2>
         <div>
           <Button onClick={() => navigate('/note/nueva')}>
             Nueva Nota

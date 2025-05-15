@@ -36,38 +36,58 @@ function Note() {
 
     return(
         <div >
-            <Button onClick={() => navigate('/home')}>
-                volver
-            </Button>
+            <div className='boton-volver'>
+                <Button onClick={() => navigate('/home')}>
+                    Volver
+                </Button>
+            </div>
             
-            <Card>
-                <form onSubmit={onSubmit} >
-                    <input type="text"
-                        placeholder="titulo"
-                        {...register("titulo", {required: true})}
-                        />
+            <div className='note-card'>
+                <Card>
+                <form onSubmit={onSubmit} className='formulario' >
 
-                    <textarea rows = "3" 
-                        placeholder="descripcion"
-                        {...register("descripcion", {required: true})}
-                    ></textarea>
-                    <button>guardar</button>
+                    <div className="form-group">
+                        <label htmlFor="titulo">Título</label>
+                        <input
+                        id="titulo"
+                        type="text"
+                        placeholder="Escribí el título..."
+                        {...register("titulo", { required: true })}
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label htmlFor="descripcion">Descripción</label>
+                        <textarea
+                        id="descripcion"
+                        rows="3"
+                        placeholder="Escribí una descripción..."
+                        {...register("descripcion", { required: true })}
+                        ></textarea>
+                    </div>
+
+                    <Button>Guardar</Button>
                 </form>
 
-                {params.id && (
-                    <button 
-                        onClick = {async() => {
-                            const accepted = window.confirm("¿Seguro que quieres eliminar la tarea?");
-                            if (accepted) {
-                                await eliminarNota(params.id);
-                                navigate('/home');
-                            }
-                        }}
-                    >
-                        eliminar
-                    </button>/*si params tiene id entonces me muestra el boton eliminar*/
-                )}
+
+               <div className='boton-eliminar-entero' >
+                    {params.id && (
+                        <Button
+                            className='boton-eliminar'
+                            onClick = {async() => {
+                                const accepted = window.confirm("¿Seguro que quieres eliminar la tarea?");
+                                if (accepted) {
+                                    await eliminarNota(params.id);
+                                    navigate('/home');
+                                }
+                            }} 
+
+                        > eliminar
+                        </Button>/*si params tiene id entonces me muestra el boton eliminar*/
+                    )}
+                </div>
             </Card>
+            </div>
 
            
         </div>

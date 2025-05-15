@@ -1,4 +1,3 @@
-import React from "react";
 import Card from "../../components/card/Card";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
@@ -16,16 +15,18 @@ function Login() {
   };
 
   return (
-    <Card title="Iniciar sesión" className="card-login">
-      <form onSubmit={handleLogin}>
-        <input type="email" placeholder="Correo" />
-        <input type="password" placeholder="Contraseña" />
-        <div className="buttons-login">
-          <button type="submit">Iniciar sesión</button>
-          <button type="button" onClick={handleRegister}>Registrarse</button>
-        </div>
-      </form>
-    </Card>
+    <div className="login">
+      <Card title="Iniciar sesión" className="card-login">
+          <form onSubmit={handleLogin}>
+            <input type="email" placeholder="Correo" />
+            <input type="password" placeholder="Contraseña" />
+            <div className="buttons-login">
+              <button type="submit">Iniciar sesión</button>
+              <button type="button" onClick={handleRegister}>Registrarse</button>
+            </div>
+          </form>
+      </Card>
+    </div>
   );
 }
 

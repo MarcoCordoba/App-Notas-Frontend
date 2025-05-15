@@ -16,7 +16,8 @@ function Register() {
   };
 
   return (
-    <Card title="Registrarse" className="card-register">
+    <div className="register">
+      <Card title="Registrarse" className="card-register">
       <form className="form-register" onSubmit={handleRegister}>
         <input type="text" placeholder="Nombre" name="nombre" required />
         <input type="text" placeholder="Apellido" name="apellido" required />
@@ -30,6 +31,7 @@ function Register() {
         </div>
       </form>
     </Card>
+    </div>
   );
 }
 

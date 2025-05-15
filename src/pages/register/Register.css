@@ -1,3 +1,11 @@
+.register {
+    display: flex;;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+
+
 .card-register form {
     display: flex;
     flex-direction: column;

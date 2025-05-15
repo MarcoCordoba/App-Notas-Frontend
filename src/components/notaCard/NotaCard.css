@@ -1,0 +1,11 @@
+.card-home{
+    margin-top: 80px;
+    max-width: 200px;
+}
+
+.card-home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centra horizontalmente */
+    height: 100%; /* útil si querés centrar verticalmente */
+}

@@ -1,6 +1,14 @@
+.login {
+    display: flex;;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
 .card-login{
     height: 350px;
     margin-top: 4rem;
+    align-content: center;
+    justify-content: center;
 }
 
 .card-login form {
