@@ -5,7 +5,7 @@ import {crearNota, eliminarNota, actualizarNota, obtenerNota} from '../../api/No
 import { useNavigate, useParams } from "react-router-dom";
 import Card from '../../components/card/Card'
 import {Button} from '../../components/button/Button'
-
+import {CircleArrowLeft, CircleX, CircleCheck} from 'lucide-react'
 
 function Note() {
 
@@ -39,6 +39,7 @@ function Note() {
             <div className='boton-volver'>
                 <Button onClick={() => navigate('/home')}>
                     Volver
+                    <CircleArrowLeft />
                 </Button>
             </div>
             
@@ -66,7 +67,10 @@ function Note() {
                         ></textarea>
                     </div>
 
-                    <Button>Guardar</Button>
+                    <Button>
+                        Guardar
+                        <CircleCheck />
+                    </Button>
                 </form>
 
 
@@ -82,7 +86,8 @@ function Note() {
                                 }
                             }} 
 
-                        > eliminar
+                        > Eliminar
+                        <CircleX />
                         </Button>/*si params tiene id entonces me muestra el boton eliminar*/
                     )}
                 </div>

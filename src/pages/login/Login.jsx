@@ -15,7 +15,7 @@ function Login() {
   };
 
   return (
-    <div className="login">
+    <div className="login"> 
       <Card title="Iniciar sesión" className="card-login">
           <form onSubmit={handleLogin}>
             <input type="email" placeholder="Correo" />

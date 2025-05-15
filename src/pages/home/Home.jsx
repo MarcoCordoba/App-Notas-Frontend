@@ -2,6 +2,7 @@ import "./home.css";
 import { ListCard } from "../../components/listCard/ListCard";
 import {Button} from "../../components/button/Button";
 import { useNavigate } from "react-router-dom"; 
+import {Save , CirclePlus, NotebookPen} from 'lucide-react'
 
 function Home() {
 
@@ -10,10 +11,11 @@ function Home() {
   return (
     <div>
       <div className="home-header">
-        <h2 className="titulo">Notas</h2>
+        <h2 className="titulo">Mis Notas <NotebookPen /></h2>
         <div>
           <Button onClick={() => navigate('/note/nueva')}>
-            Nueva Nota
+            Crear Nota
+            <CirclePlus/>
           </Button>
         </div>
       </div>
