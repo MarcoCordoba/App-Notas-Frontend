@@ -11,3 +11,9 @@
 .icono{
     width: 30px;
 }
+
+.boton-navbar{
+    margin-left: auto;
+    align-content: center;
+    margin-right: 60px;
+}

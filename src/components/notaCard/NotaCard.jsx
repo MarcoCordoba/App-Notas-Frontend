@@ -9,7 +9,7 @@ export function NotaCard({tarea}){
     return (
        <Card className="card-home">
             <div onClick={() => { navigate('/note/' + tarea.id)}} className="card-home-content">
-                <h2>{tarea.titulo}</h2>
+                <h2 className="titulo-card">{tarea.titulo}</h2>
                 <p>{tarea.descripcion}</p>
             </div>
        </Card>

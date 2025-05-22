@@ -8,3 +8,7 @@
     -webkit-line-clamp: 5;
     overflow: hidden;
 }
+
+.titulo-card{
+    color: #f45f5f;
+}
