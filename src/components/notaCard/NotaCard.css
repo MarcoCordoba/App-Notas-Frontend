@@ -2,3 +2,9 @@
     margin-top: 35px;
     width: 200px;
 }
+.card-home-content{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
