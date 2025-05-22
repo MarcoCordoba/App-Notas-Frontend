@@ -9,17 +9,19 @@ export function ListCard() {
   useEffect(() => {
     async function cargarTareas() {
       const respuesta = await getNotas();
-      // se da vuelta el orden para que la más nueva esté al principio
       setTareas(respuesta.data.reverse());
     }
     cargarTareas();
   }, []);
 
+  const tareasLimitadas = tareas.slice(0, 10);
+
   return (
     <div className="card-lista">
-      {tareas.map((tarea) => (
+      {tareasLimitadas.map((tarea) => (
         <NotaCard key={tarea.id} tarea={tarea} />
       ))}
     </div>
   );
 }
+

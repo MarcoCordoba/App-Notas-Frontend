@@ -1,6 +1,7 @@
-.card-lista{
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 40px;
+.card-lista {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
+  gap: 20px;
+  max-width: fit-content; /* Ancho del contenido, útil para centrar */
+  margin: 0 auto; /* Centra el grid horizontalmente */
 }
