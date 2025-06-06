@@ -15,7 +15,7 @@ function Login() {
   const [error, setError] = useState(null);
 
   const handleChange = (e) => {
-    setFormData({...formData, [e.target.name]: e.target.value});
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleLogin = async (e) => {
@@ -23,12 +23,14 @@ function Login() {
 
     try {
       const response = await loginUser({
-        email: formData.correo, // o email, según tu backend
+        email: formData.correo, // ojo que aquí usas "email" porque tu backend espera "email"
         password: formData.password,
       });
 
-      // Guarda el token en localStorage para usarlo luego en otras requests
-      localStorage.setItem("token", response.data.token);
+      console.log("Respuesta login:", response); // Para depurar
+
+      // Guarda el token directamente desde response.token
+      localStorage.setItem("token", response.token);
 
       setError(null);
       navigate("/home");
@@ -43,7 +45,7 @@ function Login() {
   };
 
   return (
-    <div className="login"> 
+    <div className="login">
       <Card title="Iniciar sesión" className="card-login">
         <form onSubmit={handleLogin}>
           <input
@@ -65,7 +67,9 @@ function Login() {
           {error && <p style={{ color: "red" }}>{error}</p>}
           <div className="buttons-login">
             <button type="submit">Iniciar sesión</button>
-            <button type="button" onClick={handleRegister}>Registrarse</button>
+            <button type="button" onClick={handleRegister}>
+              Registrarse
+            </button>
           </div>
         </form>
       </Card>
