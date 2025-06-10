@@ -59,4 +59,17 @@
 .buttons-login button:hover {
     background-color: #5c6bc0;
 }
-  
+
+.error-message {
+  height: 0px;
+  color: transparent;
+  background-color: transparent;
+  text-align: center;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.error-message.visible {
+  color: #ef0707;
+  padding: 0px;
+}

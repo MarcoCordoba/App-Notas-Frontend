@@ -64,7 +64,8 @@ function Login() {
             onChange={handleChange}
             required
           />
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p className={`error-message ${error ? "visible" : ""}`}>
+              {error || "⠀"} {/* Unicode espacio invisible para mantener altura */}</p>}
           <div className="buttons-login">
             <button type="submit">Iniciar sesión</button>
             <button type="button" onClick={handleRegister}>

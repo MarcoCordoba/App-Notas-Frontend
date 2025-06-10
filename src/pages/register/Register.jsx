@@ -47,7 +47,7 @@ function Register() {
       navigate("/login");
     } catch (err) {
       console.error(err.response?.data);
-      setError("Error en el registro. Revisa los datos e intenta de nuevo.");
+      setError("Error en el registro. Intenta de nuevo.");
     }
   };
 
@@ -100,7 +100,8 @@ function Register() {
             required
           />
 
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p className={`error-message ${error ? "visible" : ""}`}>
+              {error || "⠀"} {/* Unicode espacio invisible para mantener altura */}</p>}
 
           <div className="buttons-register">
             <button type="button" onClick={handleLoginRedirect}>
